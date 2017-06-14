@@ -2,7 +2,8 @@
 android 四种进程；进程；thread;安卓。
 
 # 程序运行过程
-![图](https://github.com/ALiSir/Resource/raw/master/Images/qq.JPG "实际运行图") </br>
+
+![图](https://github.com/ALiSir/ThreadExample/raw/master/example.png "实际运行图") </br>
  1.点击运行，每种线程初始化运行20次，其中如果指定线程数，则它的核心线程数为5 </br>
  2.通过显示的时间和显示的先后顺手，很容易看出线程之间的并行关系 </br>
 
