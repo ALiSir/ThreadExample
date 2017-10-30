@@ -92,17 +92,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    //FixThreadPool  类似于  Executors.newFixedThreadPool(threads);
+    //FixThreadPool  类似于  Executors.newFixedThreadPool(threads).execute(runnable);
     ExecutorService getFixThreadPool(int threads){
             return new ThreadPoolExecutor(threads,threads,0L, TimeUnit.MICROSECONDS,new LinkedBlockingDeque<Runnable>());
     }
 
-    //SingleThreadPool 类似于 Executors.newSingleThreadExecutor();
+    //SingleThreadPool 类似于 Executors.newSingleThreadExecutor().execute(runnable);
     ExecutorService getSingleThreadPool(){
         return new ThreadPoolExecutor(1,1,0L,TimeUnit.MICROSECONDS,new LinkedBlockingQueue<Runnable>());
     }
 
-    //cachedThreadPool 类似于  Executors.newCachedThreadPool()
+    //cachedThreadPool 类似于  Executors.newCachedThreadPool().execute(runnable);
     ExecutorService getCachedThreadPool(){
         return new ThreadPoolExecutor(0,Integer.MAX_VALUE,60L,TimeUnit.SECONDS,new SynchronousQueue<Runnable>());
     }
